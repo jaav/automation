@@ -9,6 +9,17 @@ users_json_file = 'users.json'
 def getProducts():
     return funcs.get_products()
 
+@post('/login')
+def login():
+    json_file = users_json_file
+    username = request.params.get('username')
+    pwd = request.params.get('pwd')
+    all_users = json.loads(get_all_items(json_file))
+    for aUser in all_users:
+        if aUser.get('username') == username and aUser.get('pwd') == pwd:
+            return {'auth': 'User Authenticated'}
+    abort(403, 'Please login')
+
 @get('/users')
 def getUsers():
     json_file = users_json_file
