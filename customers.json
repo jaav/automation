@@ -1,1 +1,1 @@
-[{"username": "user1", "pwd": "pwd1", "role": 1}, {"username": "user2", "pwd": "pwd2", "role": 1}, {"company": "comp4", "role": 4, "name": "name4"}, {"company": "comp5", "role": 5, "name": "name5"}, {"company": "comp6", "role": 6, "name": "name6"}]
+[{"id": 1, "name": "customer1"}, {"id": 2, "name": "customer2"} ]

@@ -1,8 +1,13 @@
 import json
-from bottle import get, post, put, delete, request, abort, response
+from bottle import get, post, put, delete, request, abort
+import funcs
 
 customers_json_file = 'customers.json'
 users_json_file = 'users.json'
+
+@get('/products')
+def getProducts():
+    return funcs.get_products()
 
 @get('/users')
 def getUsers():
